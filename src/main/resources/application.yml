@@ -1,0 +1,34 @@
+#Global configuration
+
+#Tomcat configuration
+server:
+  port: 9000
+#Log level configuration
+logging:
+  level:
+    root: ERROR
+    com:
+      openclassrooms: INFO
+    org:
+      springframework:
+        boot:
+          autoconfigure:
+            h2: INFO
+          web:
+            embedded:
+              tomcat: INFO
+#H2 Configuration
+spring:
+  application:
+    name: rev_api
+  datasource:
+    url: jdbc:h2:mem:mydb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: pa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    show-sql: true
+  h2:
+    console.enabled: true
