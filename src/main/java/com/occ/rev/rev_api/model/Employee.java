@@ -13,6 +13,7 @@ import lombok.Data;
 @Entity
 @Table(name = "employees")
 public class Employee {
+    
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,10 +24,9 @@ public class Employee {
     @Column(name="last_name")
     private String lastName;
 
+    @Column(name="mail")
     private String mail;
 
+    @Column(name="password")
     private String password;
-    
-    private String dater;
-
 }

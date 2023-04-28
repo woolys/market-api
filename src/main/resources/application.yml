@@ -28,7 +28,9 @@ spring:
     password: pa
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    #initialize data h2
     defer-datasource-initialization: true
     show-sql: true
+  #Accessing the H2 Console
   h2:
     console.enabled: true
